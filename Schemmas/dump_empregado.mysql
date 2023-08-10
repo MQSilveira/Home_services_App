@@ -1,0 +1,188 @@
+﻿-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 02/08/2023 às 00:19
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `clean-db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `chat`
+--
+
+CREATE TABLE `chat` (
+  `id` int(11) NOT NULL,
+  `created_at` datetime DEFAULT current_timestamp(),
+  `update_at` datetime DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `id_employee_FK` int(11) DEFAULT NULL,
+  `id_employer_FK` int(11) DEFAULT NULL,
+  `id_payment_FK` int(11) DEFAULT NULL,
+  `status` tinyint(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `employee`
+--
+
+CREATE TABLE `employee` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `email` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `cpf_cnpj` varchar(20) CHARACTER SET utf32 COLLATE utf32_general_ci NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `skills` varchar(20) NOT NULL,
+  `valueSkills` int(11) DEFAULT NULL,
+  `level` tinyint(2) NOT NULL,
+  `isActive` tinyint(2) NOT NULL DEFAULT 1,
+  `created_at` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `employee`
+--
+
+INSERT INTO `employee` (`id`, `name`, `email`, `cpf_cnpj`, `password`, `address`, `skills`, `valueSkills`, `level`, `isActive`, `created_at`) VALUES
+(1, 'João Silva', 'joao.silva@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Rua A, 123', 'Todos', 0, 0, 1, '2023-07-08 12:00:02'),
+(2, 'Hebert', 'hebert@gmail.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Av Testando 123', 'Todos', 0, 0, 1, '2023-07-08 12:39:02'),
+(3, 'Ana Oliveira', 'ana.oliveira@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Avenida D, 567', 'Pintura', 0, 0, 1, '2023-07-08 12:00:02'),
+(4, 'Maria Souza', 'maria.souza@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Avenida B, 456', 'Serviços Domésticos', 0, 0, 1, '2023-07-08 12:00:02'),
+(5, 'Pedro Santos', 'pedro.santos@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Rua C, 789', 'Pintura', 0, 0, 1, '2023-07-08 12:00:02'),
+(6, 'Jonas Motoqueiro', 'joninha@gmail.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Av 123 de Oliveira 4', 'Serviços Domésticos', 0, 0, 1, '2023-07-08 13:19:43'),
+(7, 'Cleiton Rasta', 'cleitin@gmail.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Av 123 de Oliviera 4', 'Serviços Domésticos', 0, 0, 1, '2023-07-08 13:24:18'),
+(8, 'Claudinho', 'Claudinho@hotmail.com', '12312312335', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Av. Ratatui', 'Manutenção Doméstica', 0, 0, 1, '2023-07-11 18:38:03'),
+(9, 'Ranivon do Canivete', 'ranin@gmail.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Av Ratata', 'Serviços Domésticos', 0, 0, 1, '2023-07-11 19:00:11'),
+(10, 'Alfredo', 'Alfredo@gmail.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Av Petequinho', 'Serviços Domésticos', 0, 0, 1, '2023-07-11 20:55:51'),
+(11, 'Florinda', 'florinda@gmail.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Flriculturasa', 'Manutenção Doméstica', 0, 0, 1, '2023-07-11 21:02:53'),
+(12, 'Camarguinho', 'Camarguinho@gmail.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'AV. Ratazana 123', 'Pintura', 0, 0, 1, '2023-07-11 21:06:02'),
+(21, 'Marcos', 'email@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'endereço', 'Serviços Domésticos', 0, 0, 1, '2023-08-01 19:12:33');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `employer`
+--
+
+CREATE TABLE `employer` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `email` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `cpf_cnpj` varchar(20) CHARACTER SET utf32 COLLATE utf32_general_ci NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `level` tinyint(4) NOT NULL,
+  `isActive` tinyint(2) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `employer`
+--
+
+INSERT INTO `employer` (`id`, `name`, `email`, `cpf_cnpj`, `password`, `address`, `level`, `isActive`) VALUES
+(1, 'João Silva', 'joao.silva@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Rua A, 123', 1, 1),
+(2, 'Maria Souza', 'maria.souza@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Avenida B, 456', 1, 1),
+(3, 'Pedro Santos', 'pedro.santos@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Rua C, 789', 1, 1),
+(4, 'Ana Oliveira', 'ana.oliveira@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Avenida D, 567', 1, 1),
+(5, 'Rafaela Lima', 'rafaela.lima@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Rua E, 789', 1, 1),
+(6, 'Felipe Pereira', 'felipe.pereira@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Avenida F, 567', 1, 1),
+(7, 'Marcos Santos', 'marcos.santos@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Rua G, 123', 1, 1),
+(8, 'Carolina Souza', 'carolina.souza@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Avenida H, 456', 1, 1),
+(9, 'Lucas Silva', 'lucas.silva@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Rua I, 789', 1, 1),
+(10, 'Mariana Oliveira', 'mariana.oliveira@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Avenida J, 567', 1, 1),
+(11, 'Gustavo Pereira', 'gustavo.pereira@email.com', '12312312312', 'c00dd8debd739bda31725c169593fef31e6f3c99b7a007610b65ba0260b3d17d', 'Rua K, 123', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `payment`
+--
+
+CREATE TABLE `payment` (
+  `id` int(11) NOT NULL,
+  `created_at` datetime DEFAULT current_timestamp(),
+  `update_at` datetime DEFAULT NULL,
+  `id_employee_FK` int(11) DEFAULT NULL,
+  `id_employer_FK` int(11) DEFAULT NULL,
+  `status` tinyint(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `chat`
+--
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `employer`
+--
+ALTER TABLE `employer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `payment`
+--
+ALTER TABLE `payment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `employee`
+--
+ALTER TABLE `employee`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT de tabela `employer`
+--
+ALTER TABLE `employer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT de tabela `payment`
+--
+ALTER TABLE `payment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

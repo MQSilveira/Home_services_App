@@ -1,0 +1,21 @@
+﻿.idea/
+*.exe/
+*.dll/
+*.log/
+
+.vs/
+bin/
+obj/
+
+
+# Arquivos e diretórios específicos do .NET Core
+*.nuget.cache/
+*.assets.json/
+
+
+# Outros arquivos específicos do Visual Studio e NuGet
+*.suo/
+*.user/
+*.vspscc/
+nuget.config/
+nuget.exe/

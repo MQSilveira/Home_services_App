@@ -43,20 +43,26 @@ Enjoy the Home Services App - GIVING A HAND TO ANOTHER and simplify the hiring o
 
 The Home Services App - GIVING A HAND TO ANOTHER project was developed by a dedicated team of professionals committed to simplifying the hiring of domestic and maintenance services. This project was conceived as part of an Integrated Project (IP) as a conclusion of a stage of the Young Programmer course at SENAC, demonstrating the team's ability to apply acquired knowledge. Here are the key authors who contributed to the success of this project:
 
-- **Djalma Yamamoto**
-  - Contact: 
+- **Djalma Yamamoto** 
+<br> - [LinkedIn](https://www.linkedin.com/in/yamamoto-hideki/)
+<br> - [GitHub](https://github.com/YH1d3k12)
 
 - **Hebert Barbosa**
-  - Contact:
+<br> - [LinkedIn](https://www.linkedin.com/in/hebert-barbosa/)
+<br> - [GitHub](https://github.com/devhebert)
  
 - **João Victor Pires**
-  - Contact:
+<br> - [LinkedIn](#)
+<br> - [GitHub](#)
 
 - **Lysia Freitas**
-  - Contact: 
+<br> - [LinkedIn](https://www.linkedin.com/in/lysiafreitas/)
+<br> - [GitHub](https://github.com/freitaslysia)
 
 - **Marcos Silveira**
-  - Contact:
- 
+<br> - [LinkedIn](https://www.linkedin.com/in/dev-marcos-silveira/)
+<br> - [GitHub](https://github.com/MQSilveira)
+
 - **Tiago Santos**
-  - Contact:
+<br> - [LinkedIn](#)
+<br> - [GitHub](#)

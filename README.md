@@ -1,60 +1,62 @@
 # Home Services App - UMA MÃO LIMPA A OUTRA
 
-Este é um projeto de um sistema de gerenciamento de empregadores e prestadores de serviço que permite a contratação de serviços domésticos, manutenção doméstica e pintura. O sistema é projetado para lidar com Usuários, cada um com suas características específicas. Além disso, existem regras de negócio que controlam as permissões e visibilidade dos usuários, bem como requisitos não funcionais que garantem a segurança e integridade dos dados.
+This is a project for a management system for employers and service providers that allows the hiring of domestic services, home maintenance, and painting. The system is designed to handle users, each with their specific characteristics. Furthermore, there are business rules controlling user permissions and visibility, as well as non-functional requirements that ensure data security and integrity.
 
-![Tela Inicial (em breve)](link_da_imagem_da_tela_inicial) 
+![Tela inicial](https://github.com/MQSilveira/People_and_Content_Management_REST_API/blob/main/files/api.png)
 
-## Requisitos para a Execução
+## Execution Requirements
 
-Para executar o Home Services App, certifique-se de que seu ambiente de desenvolvimento atenda aos seguintes requisitos:
+To run the Home Services App, make sure your development environment meets the following requirements:
 
-- **Ambiente de Desenvolvimento**:
-  - Microsoft Visual Studio (versão compatível com C# e Windows Forms).
-  - .NET Framework (ou versão superior, como .NET Core ou .NET 5).
+- **Development Environment**:
+
+  - Microsoft Visual Studio (version compatible with C# and Windows Forms).
+  - .NET Framework (or higher version, such as .NET Core or .NET 5).
 
 - **Banco de Dados**:
-  - Um banco de dados MySQL.
-  - A estrutura do banco de dados deve ser criada de acordo com o esquema do aplicativo.
-  - Exemplo de configuração da conexão: `"database=clean-db;user=root;password=''";`
 
-## Funcionalidades Principais
+  - A MySQL database.
+  - The database structure should be created according to the application's schema.
+  - Example database connection configuration:  `"database=clean-db;user=root;password=''";`
 
-O Home Services App oferece as seguintes funcionalidades principais:
+## Key Features
 
-- Cadastro e autenticação de usuários (Empregadores e Prestadores de Serviço).
-- Exploração de serviços domésticos disponíveis.
-- Solicitação e aceitação de serviços.
-- Gerenciamento de informações de perfil de usuário.
-- Regras de permissão para controlar o acesso a determinadas funcionalidades.
+The Home Services App offers the following main features:
 
-## Contribuindo
+  - Registration and authentication of users (Employers and Service Providers).
+  - Exploration of available domestic services.
+  - Requesting and accepting services.
+  - User profile information management.
+  - Permission rules to control access to specific functionalities.
 
-Se você quiser contribuir para o projeto Home Services App, fique à vontade para clonar o repositório, criar um branch para suas alterações e enviar um pull request. Certifique-se de que suas alterações se alinhem com os objetivos do projeto.
+## Contributing
 
-## Licença
+If you'd like to contribute to the Home Services App project, feel free to clone the repository, create a branch for your changes, and submit a pull request. Make sure your changes align with the project's goals.
 
-Este projeto é licenciado sob os termos da MIT. Leia o arquivo LICENSE para obter mais informações.
+## License
 
-Aproveite o Home Services App - UMA MÃO LIMPA A OUTRA e simplifique a contratação de serviços domésticos e de manutenção. Se você tiver alguma dúvida ou precisar de assistência, sinta-se à vontade para entrar em contato conosco ou criar um problema em nosso repositório.
+This project is licensed under the terms of the MIT License. Read the LICENSE file for more information.
 
-## Autores
+Enjoy the Home Services App - GIVING A HAND TO ANOTHER and simplify the hiring of domestic and maintenance services. If you have any questions or need assistance, feel free to contact us or create an issue in our repository.
 
-O projeto Home Services_App - UMA MÃO LIMPA A OUTRA foi desenvolvido por uma equipe dedicada de profissionais comprometidos em simplificar a contratação de serviços domésticos e de manutenção. Este projeto foi concebido como parte de um Projeto Integrado (PI) como conclusão de uma etapa do curso Jovem Programador - SENAC, apresentando a capacidade da equipe em aplicar os conhecimentos adquiridos. Aqui estão os principais autores que contribuíram para o sucesso deste projeto:
+## Authors
+
+The Home Services App - GIVING A HAND TO ANOTHER project was developed by a dedicated team of professionals committed to simplifying the hiring of domestic and maintenance services. This project was conceived as part of an Integrated Project (IP) as a conclusion of a stage of the Young Programmer course at SENAC, demonstrating the team's ability to apply acquired knowledge. Here are the key authors who contributed to the success of this project:
 
 - **Djalma Yamamoto**
-  - Contato: 
+  - Contact: 
 
 - **Hebert Barbosa**
-  - Contato:
+  - Contact:
  
 - **João Victor Pires**
-  - Contato:
+  - Contact:
 
 - **Lysia Freitas**
-  - Contato: 
+  - Contact: 
 
 - **Marcos Silveira**
-  - Contato:
+  - Contact:
  
 - **Tiago Santos**
-  - Contato:
+  - Contact:

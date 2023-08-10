@@ -2,7 +2,7 @@
 
 This is a project for a management system for employers and service providers that allows the hiring of domestic services, home maintenance, and painting. The system is designed to handle users, each with their specific characteristics. Furthermore, there are business rules controlling user permissions and visibility, as well as non-functional requirements that ensure data security and integrity.
 
-![Tela inicial](https://github.com/MQSilveira/People_and_Content_Management_REST_API/blob/main/files/api.png)
+![Tela inicial](https://github.com/MQSilveira/Home_services_App/blob/main/Image/inicio.png)
 
 ## Execution Requirements
 
